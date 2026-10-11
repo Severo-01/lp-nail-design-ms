@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MS Nail Design — Suas unhas. Sua essência. Seu momento.</title>
+<meta name="description" content="Realce sua beleza com unhas impecáveis, técnicas profissionais e um atendimento pensado para você.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#4A1230">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MS Nail Design — Suas unhas. Sua essência. Seu momento.">
+<meta property="og:description" content="Realce sua beleza com unhas impecáveis, técnicas profissionais e um atendimento pensado para você.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#4A1230; --wine-2:#6B1F45; --blush:#F4C6D0; --nude:#E9CDBF; --pearl:#FBF6F2; --gold:#C9A36B;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --pos:60% 50%;            /* ponto focal do vídeo (desktop) */
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--wine);color:var(--pearl);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;background:var(--wine)}
+.hero__video{position:absolute;top:0;bottom:0;left:26%;width:74%;height:100%;object-fit:cover;object-position:var(--pos);z-index:-3;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+/* contraste: vinho discreto só onde há texto */
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background:
+   linear-gradient(90deg,rgba(74,18,48,.7) 0%,rgba(74,18,48,.35) 30%,transparent 48%),
+   linear-gradient(0deg,rgba(74,18,48,.45) 0%,transparent 35%)}
+
+.hero__inner{width:100%;max-width:1320px;margin:0 auto;padding:clamp(88px,12vh,140px) clamp(24px,6vw,96px) clamp(56px,9vh,96px)}
+.hero__content{max-width:420px}
+
+.eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 clamp(20px,3.5vh,32px);font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:400;color:var(--blush)}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--gold)}
+
+h1{margin:0 0 clamp(18px,3vh,28px);font-family:var(--serif);font-weight:400;font-size:clamp(44px,4.6vw,76px);line-height:1.02;letter-spacing:-.015em;color:var(--pearl)}
+h1 .l{display:block}
+h1 .l:nth-child(2){font-style:italic;color:var(--blush)}
+
+.lead{margin:0 0 clamp(28px,4.5vh,40px);max-width:380px;font-size:clamp(15px,1.25vw,17px);line-height:1.7;font-weight:300;color:rgba(251,246,242,.92)}
+
+.cta{display:inline-flex;align-items:center;gap:14px;padding:18px 34px;border-radius:999px;background:var(--blush);color:var(--wine);text-decoration:none;font:500 14px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;
+  box-shadow:0 10px 28px -8px rgba(40,6,24,.55),0 1px 0 rgba(255,255,255,.5) inset;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background-color .35s}
+.cta:hover{transform:translateY(-3px);background:#f8d4dc;box-shadow:0 18px 36px -10px rgba(40,6,24,.6),0 1px 0 rgba(255,255,255,.6) inset}
+.cta:active{transform:translateY(-1px)}
+.cta:focus-visible{outline:2px solid var(--pearl);outline-offset:4px;box-shadow:0 0 0 6px rgba(201,163,107,.7)}
+.cta svg{width:20px;height:20px;flex:none;animation:nudge 3.2s var(--ease) 2s infinite;transition:transform .35s var(--ease)}
+.cta:hover svg{animation:none;transform:translateX(5px)}
+.aux{margin:22px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.4vw,19px);color:var(--nude);opacity:.95}
+
+/* entrada sequencial: rápida e sem esconder conteúdo por muito tempo */
+.rv{opacity:0;transform:translateY(18px);animation:rv .9s var(--ease) forwards;animation-delay:calc(.1s + var(--i)*.13s)}
+@keyframes rv{to{opacity:1;transform:none}}
+@keyframes nudge{0%,12%,100%{transform:translateX(0)}6%{transform:translateX(5px)}}
+
+/* mobile: vídeo no topo (mão inteira visível), texto ancorado embaixo */
+@media (max-width:767px){
+  :root{--pos:54% 50%}
+  .hero{align-items:flex-end}
+  .hero__video{left:0;width:100%;bottom:auto;height:52vh;height:52svh;-webkit-mask-image:linear-gradient(#000 70%,transparent 100%);mask-image:linear-gradient(#000 70%,transparent 100%)}
+  .hero::before{background:linear-gradient(0deg,rgba(74,18,48,.55) 0%,transparent 45%)}
+  .hero__inner{padding:120px 24px calc(40px + env(safe-area-inset-bottom,0px))}
+  h1{font-size:clamp(40px,12.5vw,56px)}
+  .hero__content{max-width:none}
+  .cta{width:100%;justify-content:center}
+  .eyebrow{font-size:11px;letter-spacing:.24em}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv{animation:none;opacity:1;transform:none}
+  .cta,.cta svg{transition:none;animation:none}
+}
+
+.top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top,0px)) clamp(20px,5vw,64px) 0}
+.brand{display:flex;align-items:baseline;gap:10px;color:var(--pearl);text-decoration:none}
+.brand b{font:500 30px/1 var(--serif);letter-spacing:.04em}.brand span{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--blush)}
+.top nav{display:flex;align-items:center;gap:28px}
+.top nav a{color:var(--pearl);text-decoration:none;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.top nav a:hover{color:var(--blush)}
+.top .navcta{padding:10px 20px;border:1px solid rgba(244,198,208,.7);border-radius:999px;transition:background .3s,color .3s}
+.top .navcta:hover{background:var(--blush);color:var(--wine)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sec{padding:clamp(72px,11vw,140px) 0}
+.sec--pearl{background:var(--pearl);color:var(--wine)}.sec--nude{background:#F3E3DA;color:var(--wine)}
+.sec--wine{background:var(--wine);color:var(--pearl);text-align:center}
+.wrapx{max-width:760px;margin:0 auto;padding:0 clamp(24px,6vw,48px)}.wrapx.wide{max-width:1200px}
+.kick{margin:0 0 16px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#9A6B3E;display:flex;align-items:center;gap:14px}
+.kick::before{content:"";width:36px;height:1px;background:var(--gold)}
+.sec--wine .kick{color:var(--blush)}
+h2{margin:0 0 20px;font:400 clamp(34px,5vw,58px)/1.08 var(--serif);letter-spacing:-.01em}
+.sec--wine h2{max-width:640px;margin-inline:auto}
+#sobre h2{max-width:720px}
+.lede{margin:0 0 8px;max-width:620px;font-size:clamp(15px,1.4vw,18px);line-height:1.75;font-weight:300}
+.lede--light{margin:0 auto 36px;color:rgba(251,246,242,.9)}
+.grid{columns:2;column-gap:14px;margin-top:40px}
+@media(min-width:900px){.grid{columns:3;column-gap:18px}}
+.ph{display:block;width:100%;padding:0;margin:0 0 14px;border:0;border-radius:18px;overflow:hidden;background:#e7d3c8;cursor:zoom-in;break-inside:avoid;box-shadow:0 10px 30px -14px rgba(74,18,48,.45)}
+@media(min-width:900px){.ph{margin-bottom:18px}}
+.ph img{display:block;width:100%;height:auto;transition:transform .8s var(--ease)}
+.ph:hover img{transform:scale(1.05)}
+.mid{text-align:center;margin-top:36px}
+.cta--wine{background:var(--wine);color:var(--pearl)}.cta--wine:hover{background:var(--wine-2)}
+.cards,.steps{display:grid;gap:18px;margin:40px 0 0;padding:0;list-style:none;grid-template-columns:1fr}
+@media(min-width:800px){.cards,.steps{grid-template-columns:repeat(3,1fr);gap:24px}}
+.card,.steps li{background:#fff;border-radius:20px;padding:32px 28px;box-shadow:0 14px 34px -20px rgba(74,18,48,.4)}
+.sec--nude .steps li{background:var(--pearl)}
+.card h3,.steps h3{margin:0 0 10px;font:500 26px/1.15 var(--serif)}
+.card p,.steps p{margin:0;font-size:15px;line-height:1.7;font-weight:300}
+.steps span{display:grid;place-items:center;width:40px;height:40px;margin-bottom:18px;border-radius:50%;background:var(--blush);color:var(--wine);font:500 18px var(--serif)}
+.info{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;font-size:14px;color:var(--nude)}
+.info a{color:var(--blush)}
+.foot{background:#35091f;color:rgba(251,246,242,.7);text-align:center;padding:28px 24px calc(28px + env(safe-area-inset-bottom,0px));font-size:13px}
+.foot b{font:500 18px var(--serif);color:var(--pearl);margin-right:6px}
+.sticky{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:6;text-align:center;padding:16px;border-radius:999px;background:var(--blush);color:var(--wine);font:500 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 12px 30px -8px rgba(40,6,24,.6);transform:translateY(140%);transition:transform .4s var(--ease)}
+.sticky.on{transform:none}
+@media(min-width:768px){.sticky{display:none}}
+.rv2{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv2.in{opacity:1;transform:none}
+.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;color:#fff}
+.lb::backdrop{background:rgba(30,6,20,.92)}
+.lb[open]{display:flex;align-items:center;justify-content:center}
+.lb img{max-width:min(92vw,900px);max-height:86vh;border-radius:12px;object-fit:contain}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:50%;width:48px;height:48px;font-size:28px;cursor:pointer}
+.lb__x{top:calc(16px + env(safe-area-inset-top,0px));right:16px}.lb__n{right:12px;top:50%;translate:0 -50%}.lb__p{right:auto;left:12px}
+@media(max-width:767px){.top nav a:not(.navcta){display:none}.brand span{display:none}}
+@media(prefers-reduced-motion:reduce){.rv2{opacity:1;transform:none;transition:none}.ph img,.sticky{transition:none}}
+.foot__links{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center;margin-bottom:16px}
+.foot__links a{display:inline-flex;align-items:center;gap:8px;color:var(--blush);text-decoration:none;font-size:13px;letter-spacing:.1em}
+.foot__links a:hover{text-decoration:underline}.foot p{margin:0}
+</style>
+</head>
+<body>
+<header class="top" id="top"><a class="brand" href="#inicio" aria-label="MS Nail Design"><b>MS</b><span>Nail Design</span></a>
+<nav aria-label="Principal"><a href="#portfolio">Portfólio</a><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a class="navcta" href="#" data-cta>Agendar</a></nav></header>
+<main>
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="poster.jpg" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow rv" style="--i:0">Beleza • Cuidado • Exclusividade</p>
+      <h1 id="hero-title">
+        <span class="l rv" style="--i:1">Suas unhas.</span>
+        <span class="l rv" style="--i:2">Sua essência.</span>
+        <span class="l rv" style="--i:3">Seu momento.</span>
+      </h1>
+      <p class="lead rv" style="--i:4">Realce sua beleza com unhas impecáveis, técnicas profissionais e um atendimento pensado para você.</p>
+      <a class="cta rv" data-cta style="--i:5" href="#agendamento">
+        <span>Agendar meu horário</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="aux rv" style="--i:6">Seu próximo momento de cuidado começa aqui.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--pearl" id="sobre"><div class="wrapx wide">
+ <p class="kick">Beleza • Cuidado • Exclusividade</p>
+ <h2>Cada detalhe pensado para você.</h2>
+ <p class="lede">Unhas impecáveis, técnicas profissionais e um atendimento pensado para você. Do acabamento natural às nail arts mais delicadas, cada trabalho é feito com atenção e carinho.</p>
+</div></section>
+
+<section class="sec sec--nude" id="portfolio"><div class="wrapx wide">
+ <p class="kick">Portfólio</p><h2>Trabalhos que falam por si.</h2>
+ <p class="lede">Alguns dos trabalhos realizados. Toque numa foto para ampliar.</p>
+ <div class="grid"><button class="ph rv2" type="button" data-i="1" aria-label="Ampliar foto 1"><img src="foto-1.jpg" alt="Unhas em francesinha clássica, acabamento natural e brilhante" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="2" aria-label="Ampliar foto 2"><img src="foto-2.jpg" alt="Unhas com ponta lilás, detalhe em glitter dourado e borboletas" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="3" aria-label="Ampliar foto 3"><img src="foto-3.jpg" alt="Esmaltação em preto e nude com glitter e pedrarias" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="4" aria-label="Ampliar foto 4"><img src="foto-4.jpg" alt="Unhas em tom rosado com francesinha e glitter dourado" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="5" aria-label="Ampliar foto 5"><img src="foto-5.jpg" alt="Unhas com efeito perolado em degradê rosa" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="6" aria-label="Ampliar foto 6"><img src="foto-6.jpg" alt="Francesinha azul-bebê com pedrarias delicadas" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="7" aria-label="Ampliar foto 7"><img src="foto-7.jpg" alt="Unhas com francesinha rosa e corações pintados à mão" loading="lazy" decoding="async"></button><button class="ph rv2" type="button" data-i="8" aria-label="Ampliar foto 8"><img src="foto-8.jpg" alt="Unhas amendoadas com glitter rosa cintilante" loading="lazy" decoding="async"></button></div>
+ <div class="mid"><a class="cta cta--wine" data-cta href="#"><span>Quero um desses looks</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section class="sec sec--pearl" id="servicos"><div class="wrapx wide">
+ <p class="kick">Serviços</p><h2>O que você encontra aqui.</h2>
+ <div class="cards">
+  <article class="card"><h3>Francesinha &amp; cores</h3><p>Da francesinha clássica a pontas coloridas, com acabamento limpo e delicado.</p></article>
+  <article class="card"><h3>Nail art &amp; pedrarias</h3><p>Glitter, pedrarias e desenhos feitos à mão para um toque único.</p></article>
+  <article class="card"><h3>Esmaltação em gel</h3><p>Cor e brilho com acabamento profissional, para unhas sempre bonitas.</p></article>
+ </div>
+</div></section>
+
+<section class="sec sec--nude" id="como"><div class="wrapx wide">
+ <p class="kick">Como funciona</p><h2>Agendar é simples.</h2>
+ <ol class="steps">
+  <li><span>1</span><h3>Chame para agendar</h3><p>Clique no botão e escolha o melhor horário para você.</p></li>
+  <li><span>2</span><h3>Escolha o seu estilo</h3><p>Inspire-se no portfólio e conte o que imagina para as suas unhas.</p></li>
+  <li><span>3</span><h3>Aproveite o momento</h3><p>Relaxe e saia com unhas impecáveis e cheias de personalidade.</p></li>
+ </ol>
+</div></section>
+
+<section class="sec sec--wine" id="agendar"><div class="wrapx">
+ <h2>Seu próximo momento de cuidado começa aqui.</h2>
+ <p class="lede lede--light">Reserve o seu horário e deixe suas unhas com a sua essência.</p>
+ <a class="cta" data-cta href="#"><span>Agendar meu horário</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+ <ul class="info" id="info" hidden></ul>
+</div></section>
+</main>
+<footer class="foot" id="foot"><div class="foot__links"><a href="https://www.instagram.com/stefanemilanezz?vrfl=MXF5NnhkbXZzcjJ6Zw==" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><span>Instagram</span></a><a href="privacidade.html">Política de Privacidade</a></div><p><b>MS</b> Nail Design · © <span id="yr"></span> · Todos os direitos reservados</p></footer>
+<a class="sticky" data-cta href="#" id="sticky">Agendar meu horário</a>
+<dialog class="lb" id="lb" aria-label="Foto ampliada"><button class="lb__x" aria-label="Fechar" id="lbx">×</button><button class="lb__n lb__p" aria-label="Anterior" id="lbp">‹</button><img alt="" id="lbi"><button class="lb__n" aria-label="Próxima" id="lbn">›</button></dialog>
+<script>
+/* ================= CONFIGURAÇÃO ================= */
+var CONFIG = {
+  // ► WhatsApp para agendamento. Usado em TODOS os botões "Agendar". Para trocar o número ou a mensagem, edite aqui.
+  whatsapp: "5521990057393",
+  mensagem: "Olá! Gostaria de agendar um horário.",
+  ctaUrl: "",
+  // ► Opcionais: só aparecem se preenchidos.
+  instagram: "",   // ex.: "https://instagram.com/seuusuario"
+  cidade: "",      // ex.: "São Paulo - SP"
+  horarios: "",    // ex.: "Seg a Sáb, 9h às 18h"
+  // ► Ponto focal do vídeo ("x% y%").
+  videoPosition: { desktop: "60% 50%", mobile: "54% 50%" }
+};
+/* ================================================= */
+(function(){
+  var $=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var root=document.documentElement, v=document.getElementById('heroVideo');
+  var mq=matchMedia('(max-width:767px)'), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function pos(){root.style.setProperty('--pos',mq.matches?CONFIG.videoPosition.mobile:CONFIG.videoPosition.desktop)}
+  pos(); (mq.addEventListener?mq.addEventListener('change',pos):mq.addListener(pos));
+
+  if(!CONFIG.ctaUrl&&CONFIG.whatsapp)CONFIG.ctaUrl='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(CONFIG.mensagem||'');
+  $('[data-cta]').forEach(function(a){
+    if(CONFIG.ctaUrl){a.href=CONFIG.ctaUrl;a.target="_blank";a.rel="noopener"}
+    else a.addEventListener('click',function(e){e.preventDefault();console.warn('Defina CONFIG.ctaUrl com o link de agendamento.')});
+  });
+  var info=document.getElementById('info'),items=[];
+  if(CONFIG.cidade)items.push('<li>'+CONFIG.cidade+'</li>');
+  if(CONFIG.horarios)items.push('<li>'+CONFIG.horarios+'</li>');
+  if(CONFIG.instagram)items.push('<li><a href="'+CONFIG.instagram+'" target="_blank" rel="noopener">Instagram</a></li>');
+  if(items.length){info.innerHTML=items.join('');info.hidden=false}
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  if(reduce){v.removeAttribute('autoplay');v.pause()}
+  else{var p=v.play();if(p&&p.catch)p.catch(function(){})}
+  v.addEventListener('error',function(){v.style.display='none'});
+
+  // revelar ao rolar + botão fixo no celular
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+  $('.rv2').forEach(function(el,i){el.style.transitionDelay=((i%3)*80)+'ms';io?io.observe(el):el.classList.add('in')});
+  var st=document.getElementById('sticky'),hero=document.getElementById('inicio'),ag=document.getElementById('agendar');
+  if(io&&st){var vis={inicio:true},ft=document.getElementById('foot');
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target.id]=e.isIntersecting});st.classList.toggle('on',!(vis.inicio||vis.agendar||vis.foot))},{threshold:.2});
+    so.observe(hero);so.observe(ag);so.observe(ft)}
+
+  // lightbox
+  var lb=document.getElementById('lb'),li=document.getElementById('lbi'),ph=$('.ph'),cur=0;
+  function show(n){cur=(n+ph.length)%ph.length;var im=ph[cur].querySelector('img');li.src=im.src;li.alt=im.alt}
+  ph.forEach(function(b,i){b.addEventListener('click',function(){show(i);lb.showModal?lb.showModal():lb.setAttribute('open','')})});
+  document.getElementById('lbx').onclick=function(){lb.close()};
+  document.getElementById('lbp').onclick=function(){show(cur-1)};
+  document.getElementById('lbn').onclick=function(){show(cur+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+  document.addEventListener('keydown',function(e){if(!lb.open)return;if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+})();
+</script>
+</body>
+</html>
